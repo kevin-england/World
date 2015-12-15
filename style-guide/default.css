@@ -1,0 +1,66 @@
+.font-one {
+  font-size: 60px;
+  font-family: 'Tangerine', cursive;
+  text-align: center;
+}
+
+.font-two {
+  font-size: 32px;
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.colors {
+  display: inline-block;
+}
+
+.color-one {
+  background-color: #A8B5B4;
+  color: #0B1211;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+.color-two {
+  background-color: #50958E;
+  color: #0B1211;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+.color-three {
+  background-color: #19675F;
+  color: #0B1211;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+.color-four {
+  background-color: #003630;
+  color: #A8B5B4;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
+
+.color-five {
+  background-color: #0B1211;
+  color: #A8B5B4;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+}
