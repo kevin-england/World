@@ -1,17 +1,40 @@
 .main {
-  color: #A8B5B4;
-  font-size: 100px;
+  border-bottom: 1px solid #50958E;
+  color: #50958E;
+  font-size: 130px;
+  font-weight: bold;
   font-family: 'Tangerine', cursive;
+  margin-left: 60px;
   text-align: center;
   text-shadow: 1px 1px 1px #0B1211;
 }
 
-.tabs {
+.home-image {
+  border: .5px solid #003630;
+  box-shadow: 10px 10px 5px #A8B5B4;
   display: block;
-  font-size: 25px;
-  font-family: 'PT Sans', sans-serif;
-  height: 200px;
+  height: 450px;
+  width: 750px;
+  margin: 30px;
+  margin-left: 60px;
+}
+
+.tabs {
+  background-color: #50958E;
+  border: 2px solid #003630;
+  box-shadow: 10px 10px 5px #A8B5B4;
+  color: #A8B5B4;
+  display: block;
+  float: right;
+  font-size: 50px;
+  font-family: 'Tangerine', sans-serif;
+  height: 1080px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 40px;
   text-align: right;
+  text-shadow: 1px 1px 1px #0B1211;
+  width: 650px;
 }
 
 .member {
@@ -21,6 +44,7 @@
   color: #0B1211;
   font-family: 'PT Sans', sans-serif;
   height: 400px;
+  margin: 20px;
   padding: 20px;
   text-align: right;
   width: 850px;
@@ -28,22 +52,22 @@
 
 .member-one {
   color: #A8B5B4;
-  font-size: 36px;
+  font-size: 44px;
   font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 1px #0B1211;
 }
 
 .member-two {
-  font-size: 18px;
-  margin-top: 25px;
+  font-size: 22px;
+  margin-top: 20px;
   padding: 10px;
   text-align: left;
   text-shadow: 1px 1px 1px #A8B5B4;
 }
 
 .signin {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 40px;
   margin-left: 20px;
 }
