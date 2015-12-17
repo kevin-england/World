@@ -41,7 +41,6 @@ signup.addEventListener('submit', function(e) {
   }
   var newString = JSON.stringify(user);
   var xhr = new XMLHttpRequest();
-  xhr.open('USE', '/indexOne.html')
   xhr.open('POST', '/signup');
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(newString);
