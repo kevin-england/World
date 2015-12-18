@@ -1,15 +1,22 @@
-var images = document.getElementById('adventure')
-images = function createImage() {
-  var image = document.createElement('img');
-  image.setAttribute('src', 'images/vlax.jpg');
-  image.setAttribute('class', 'img-responsive character-image');
+function createHeader(text) {
+  var header = document.createElement('h' + text);
+  header.setAttribute('class', 'main');
+  var oneHeader = document.createTextNode('The Adventures in Orthia');
+  header.appendChild(oneHeader);
 
-  var image1 = document.createElement('img');
-  image1.setAttribute('src', 'images/octurnus.jpg');
-  image1.setAttribute('class', 'img-responsive character-image');
+  var test = document.getElementById('head'); 
 
-  document.body.appendChild(image);
-  document.body.appendChild(image1);
+  test.appendChild(header);
 }
 
-images()
+function createParagraph(text) {
+  var paragraph = document.createElement('p' + text);
+  paragraph.setAttribute('class', 'selection');
+  var oneParagraph = document.createTextNode('Choose Your Character');
+  paragraph.appendChild(oneParagraph);
+
+  document.body.appendChild(paragraph);
+}
+
+createHeader()
+createParagraph()

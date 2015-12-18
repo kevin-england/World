@@ -97,3 +97,16 @@
   margin: 20px;
   border-radius: 100px;
 }
+
+.options {
+  border: 2px solid #0B1211;
+  box-shadow: 10px 10px 5px #50958E;
+  color: #50958E;
+  display: block;
+  font-size: 50px;
+  font-family: 'Tangerine', sans-serif;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #0B1211;
+}

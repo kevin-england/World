@@ -1,42 +1,23 @@
-function createHeader(text) {
-  var header = document.createElement('h' + text);
-  header.setAttribute('class', 'main');
-  var oneHeader = document.createTextNode('The Adventures in Orthia');
-  header.appendChild(oneHeader);
-
-  document.body.appendChild(header);
-}
-
-function createParagraph(text) {
-  var paragraph = document.createElement('p' + text);
-  paragraph.setAttribute('class', 'selection');
-  var oneParagraph = document.createTextNode('Choose Your Character');
-  paragraph.appendChild(oneParagraph);
-
-  document.body.appendChild(paragraph);
-}
-
-createHeader()
-createParagraph()
-
 var characters = { characters: [
   { 
     name: 'Vlax Madero', 
     location: 'Grand Misal',
     image: 'images/vlax.jpg',
-    description: 'lorem ipsum'
+    description: 'lorem ipsum',
+    button: 'Select'
   },
   { 
     name: 'Octurnus', 
     location: 'Artesian Jungle',
     image: 'images/octurnus.jpg',
-    description: 'lorem ipsum'
+    description: 'lorem ipsum',
+    button: 'Select'
   }
 ]};
 
 function createCharacter(info) {
   var container = document.createElement('div');
-  container.setAttribute('class', 'col-md-6');
+  container.setAttribute('class', 'col-md-3 col-md-offset-2');
 
   var header = document.createElement('h1');
   header.textContent = info.name;
@@ -45,23 +26,27 @@ function createCharacter(info) {
   location.textContent = info.location;
 
   var photo = document.createElement('img');
-  photo.setAttribute('src', info.image)
+  photo.setAttribute('src', info.image);
+  photo.setAttribute('class', 'character-image')
 
   var description = document.createElement('p');
   description.textContent = info.description;
+
+  var button = document.createElement('button');
+  button.textContent = info.button;
 
   container.appendChild(header);
   container.appendChild(location);
   container.appendChild(photo);
   container.appendChild(description);
+  container.appendChild(button)
   console.log(container)
   return container;
 }
 
 var holder = document.getElementById('holder');
-console.log(holder)
 
-for (var i = 0; i < characters.characters.length - 1; i++) {
+for (var i = 0; i < characters.characters.length; i++) {
   var theCharacter = createCharacter(characters.characters[i]);
   console.log(theCharacter)
   holder.appendChild(theCharacter);

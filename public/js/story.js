@@ -4,7 +4,7 @@ reader.choices = [];
 var button = document.getElementById('button');
 button.addEventListner('click', function(theEvent) {
   var choice = document.getElementById('choice');
-  reader.choice.push(choice.input);
+  reader.choices.push(choice.input);
 ​
   xhr.open('POST', '/story');
   xhr.send(reader);
