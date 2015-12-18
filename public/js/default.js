@@ -1,12 +1,11 @@
 function createHeader(text) {
   var header = document.createElement('h' + text);
   header.setAttribute('class', 'main');
-  var oneHeader = document.createTextNode('The World of Orthia');
+  var oneHeader = document.createTextNode('The Adventures in Orthia');
   header.appendChild(oneHeader);
 
   document.body.appendChild(header);
 }
-
 
 function createImage() {
   var image = document.createElement('img');
