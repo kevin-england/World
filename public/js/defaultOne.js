@@ -1,14 +1,14 @@
 var characters = { characters: [
   { 
     name: 'Vlax Madero', 
-    location: 'Grand Misal',
+    title: 'The Story of the Egg',
     image: 'images/vlax.jpg',
     description: 'lorem ipsum',
     button: 'Select'
   },
   { 
     name: 'Octurnus', 
-    location: 'Artesian Jungle',
+    title: 'A King Amongst Commoners',
     image: 'images/octurnus.jpg',
     description: 'lorem ipsum',
     button: 'Select'
@@ -17,13 +17,15 @@ var characters = { characters: [
 
 function createCharacter(info) {
   var container = document.createElement('div');
-  container.setAttribute('class', 'col-md-3 col-md-offset-2');
+  container.setAttribute('class', 'col-md-5 options');
 
   var header = document.createElement('h1');
+  header.setAttribute('class', 'character-name')
   header.textContent = info.name;
 
-  var location = document.createElement('p');
-  location.textContent = info.location;
+  var title = document.createElement('p');
+  title.setAttribute('class', 'title')
+  title.textContent = info.title;
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
@@ -36,7 +38,7 @@ function createCharacter(info) {
   button.textContent = info.button;
 
   container.appendChild(header);
-  container.appendChild(location);
+  container.appendChild(title);
   container.appendChild(photo);
   container.appendChild(description);
   container.appendChild(button)

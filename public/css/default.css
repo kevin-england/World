@@ -10,22 +10,34 @@
 }
 
 .tabs {
+  color: #A8B5B4;
+  display: inline;
+  font-size: 35px;
+  font-family: 'PT Sans', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #0B1211;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.tabs:hover {
+  color: #F0C981;
+  text-decoration: none;
+}
+
+.nav {
   background-color: #50958E;
   border: 2px solid #003630;
   box-shadow: 10px 10px 5px #A8B5B4;
-  color: #A8B5B4;
-  display: block;
-  font-size: 50px;
-  font-family: 'Tangerine', sans-serif;
-  margin: 20px;
-  padding: 20px;
   text-align: right;
-  text-shadow: 1px 1px 1px #0B1211;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .home-image {
   border: .5px solid #003630;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 10px 10px 5px #A8B5B4;
   display: block;
   margin: 30px;
@@ -66,28 +78,31 @@
 }
 
 .selection {
-  background-color: #50958E;
-  border: 2px solid #003630;
-  box-shadow: 10px 10px 5px #A8B5B4;
   color: #A8B5B4;
   display: block;
   font-size: 80px;
-  font-family: 'Tangerine', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
   padding: 20px;
-  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
   text-align: center;
   text-shadow: 1px 1px 1px #0B1211;
 }
 
-.characters {
-  background-color: #50958E;
-  border: 2px solid #003630;
-  box-shadow: 10px 10px 5px #A8B5B4;
-  color: #0B1211;
-  font-family: 'PT Sans', sans-serif;
+.options {
+  background-color: #A8B5B4;
+  border: 2px solid #0B1211;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px #50958E;
+  color: #50958E;
+  display: block;
+  font-family: 'Tangerine', sans-serif;
   margin: 20px;
+  margin-left: 60px;
   padding: 20px;
-  text-align: right;
+  text-align: center;
+  text-shadow: 1px 1px 1px #0B1211;
 }
 
 .character-image {
@@ -98,15 +113,22 @@
   border-radius: 100px;
 }
 
-.options {
-  border: 2px solid #0B1211;
-  box-shadow: 10px 10px 5px #50958E;
+.character-name {
+  border-bottom: 1px solid #50958E;
   color: #50958E;
   display: block;
-  font-size: 50px;
+  font-size: 90px;
   font-family: 'Tangerine', sans-serif;
-  margin: 20px;
-  padding: 20px;
+  font-weight: bold;
   text-align: center;
-  text-shadow: 1px 1px 1px #0B1211;
+  text-shadow: 1px 1px 1px #003630;
+}
+
+.title {
+  color: #0B1211;
+  font-size: 40px;
+  font-family: 'PT Sans', sans-serif;
+  margin-top: 20px;
+  text-align: left;
+  text-shadow: 1px 1px 1px #50958E;
 }
