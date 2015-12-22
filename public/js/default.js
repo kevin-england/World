@@ -1,33 +1,57 @@
-function createHeader(text) {
-  var header = document.createElement('h' + text);
-  header.setAttribute('class', 'main');
-  var oneHeader = document.createTextNode('The Adventures in Orthia');
-  header.appendChild(oneHeader);
+var characters = { characters: [
+  { 
+    name: 'Elvie the Egg', 
+    description: 'Choose Elvie and follow his journey down a bumpy road',
+    image: 'images/vlax.jpg',
+    title: 'The Rolling Egg',
+    button: 'Select'
+  },
+  { 
+    name: 'Gervis the Hare', 
+    description: 'Choose Gervis and follow his side of the journey',
+    image: 'images/octurnus.jpg',
+    title: 'The Orthian Version of the Tortoise and the Hare',
+    button: 'Select'
+  }
+]};
 
-  document.body.appendChild(header);
+function createCharacter(info) {
+  var container = document.createElement('div');
+  container.setAttribute('class', 'col-md-5 options');
+
+  var header = document.createElement('h1');
+  header.setAttribute('class', 'character-name')
+  header.textContent = info.name;
+
+  var title = document.createElement('p');
+  title.setAttribute('class', 'title')
+  title.textContent = info.title;
+
+  var photo = document.createElement('img');
+  photo.setAttribute('src', info.image);
+  photo.setAttribute('class', 'character-image')
+
+  var description = document.createElement('p');
+  description.setAttribute('class', 'description')
+  description.textContent = info.description;
+
+  var button = document.createElement('button');
+  button.setAttribute('class', 'select')
+  button.textContent = info.button;
+
+  container.appendChild(header);
+  container.appendChild(description);
+  container.appendChild(photo);
+  container.appendChild(title);
+  container.appendChild(button)
+  console.log(container)
+  return container;
 }
 
-function createImage() {
-  var image = document.createElement('img');
-  image.setAttribute('src', 'images/home.jpg');
-  image.setAttribute('class', 'img-responsive home-image');
+var holder = document.getElementById('holder');
 
-  document.body.appendChild(image);
+for (var i = 0; i < characters.characters.length; i++) {
+  var theCharacter = createCharacter(characters.characters[i]);
+  console.log(theCharacter)
+  holder.appendChild(theCharacter);
 }
-
-function createTabs(text) {
-  var tabs = document.createElement('li' + text);
-  tabs.setAttribute('class', 'tabs')
-  var oneTab = document.createTextNode('Overview ');
-  var twoTab = document.createTextNode('Story ');
-  var threeTab = document.createTextNode('Login');
-  tabs.appendChild(oneTab);
-  tabs.appendChild(twoTab);
-  tabs.appendChild(threeTab);
-
-  document.body.appendChild(tabs);
-}
-
-createHeader()
-createTabs()
-createImage()

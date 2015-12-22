@@ -8,12 +8,12 @@ app.use('/', express.static('public'));
 app.get('/story', bodyParser.json(), function(req, res) {
   if(match(req.body.reader.choices, [1, 2, 4])) {
     part = {
-      text: "In the beginning..."
+      text: "One path continues the path along the plains of Orthia"
     };
     res.send(part);
   } else if (match(req.body.reader.choices, [1, 3, 7])) {
     part = {
-      text: "A light flickered in the darkness..."
+      text: "Another path takes a turn into a nearby alleyway leading directly into a small village"
     };
     res.send(part);
   };

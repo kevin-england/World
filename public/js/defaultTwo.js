@@ -4,19 +4,30 @@ function createHeader(text) {
   var oneHeader = document.createTextNode('The Adventures in Orthia');
   header.appendChild(oneHeader);
 
-  var test = document.getElementById('head'); 
-
-  test.appendChild(header);
+  document.body.appendChild(header);
 }
 
-function createParagraph(text) {
-  var paragraph = document.createElement('p' + text);
-  paragraph.setAttribute('class', 'selection');
-  var oneParagraph = document.createTextNode('Choose Your Character');
-  paragraph.appendChild(oneParagraph);
+function createImage() {
+  var image = document.createElement('img');
+  image.setAttribute('src', 'images/home.jpg');
+  image.setAttribute('class', 'img-responsive home-image');
 
-  document.body.appendChild(paragraph);
+  document.body.appendChild(image);
+}
+
+function createTabs(text) {
+  var tabs = document.createElement('li' + text);
+  tabs.setAttribute('class', 'tabs')
+  var oneTab = document.createTextNode('Overview ');
+  var twoTab = document.createTextNode('Story ');
+  var threeTab = document.createTextNode('Login');
+  tabs.appendChild(oneTab);
+  tabs.appendChild(twoTab);
+  tabs.appendChild(threeTab);
+
+  document.body.appendChild(tabs);
 }
 
 createHeader()
-createParagraph()
+createTabs()
+createImage()

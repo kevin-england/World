@@ -1,16 +1,16 @@
 var characters = { characters: [
   { 
-    name: 'Vlax Madero', 
-    title: 'The Story of the Egg',
-    image: 'images/vlax.jpg',
+    name: 'The Egg', 
     description: 'lorem ipsum',
+    image: 'images/vlax.png',
+    title: 'The Story of the Rolling Egg',
     button: 'Select'
   },
   { 
     name: 'Octurnus', 
-    title: 'A King Amongst Commoners',
+    description: 'lorem ipsum for now',
     image: 'images/octurnus.jpg',
-    description: 'lorem ipsum',
+    title: 'Title 2',
     button: 'Select'
   }
 ]};
@@ -38,9 +38,9 @@ function createCharacter(info) {
   button.textContent = info.button;
 
   container.appendChild(header);
-  container.appendChild(title);
-  container.appendChild(photo);
   container.appendChild(description);
+  container.appendChild(photo);
+  container.appendChild(title);
   container.appendChild(button)
   console.log(container)
   return container;
