@@ -1,17 +1,17 @@
 var characters = { characters: [
   { 
     name: 'Elvie the Egg', 
-    description: 'Choose Elvie and follow his journey down a bumpy road',
+    description: 'Select and watch Elvie roll!',
     image: 'images/vlax.jpg',
     title: 'The Rolling Egg',
-    button: 'Select'
+    button: 'Get Started'
   },
   { 
     name: 'Gervis the Hare', 
-    description: 'Choose Gervis and follow his side of the journey',
+    description: 'Select and the race is on!',
     image: 'images/octurnus.jpg',
     title: 'The Orthian Version of the Tortoise and the Hare',
-    button: 'Select'
+    button: 'Get Started'
   }
 ]};
 

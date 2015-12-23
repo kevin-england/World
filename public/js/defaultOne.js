@@ -1,55 +1,39 @@
-var characters = { characters: [
-  { 
-    name: 'The Egg', 
-    description: 'lorem ipsum',
-    image: 'images/vlax.png',
-    title: 'The Story of the Rolling Egg',
-    button: 'Select'
-  },
-  { 
-    name: 'Octurnus', 
-    description: 'lorem ipsum for now',
-    image: 'images/octurnus.jpg',
-    title: 'Title 2',
-    button: 'Select'
+var reader = {};
+reader.choices = [];
+
+var button = document.getElementById('button');
+button.addEventListner('click', function(theEvent) {
+  var choice = document.getElementById('choice');
+  reader.choices.push(choice.input);
+
+  choice.input = {
+    1: 'Left'
+    2: 'Right'
   }
-]};
 
-function createCharacter(info) {
-  var container = document.createElement('div');
-  container.setAttribute('class', 'col-md-5 options');
+  xhr.open('POST', '/story');
+  xhr.send(reader);
 
-  var header = document.createElement('h1');
-  header.setAttribute('class', 'character-name')
-  header.textContent = info.name;
+  xhr.addEventListner('load', function(theEvent) { 
+    var response = JSON.parse(xhr.responseText);
+    document.getElementById('passage').textContent = response.text;
+  })
+});
 
-  var title = document.createElement('p');
-  title.setAttribute('class', 'title')
-  title.textContent = info.title;
-
-  var photo = document.createElement('img');
-  photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'character-image')
-
-  var description = document.createElement('p');
-  description.textContent = info.description;
-
-  var button = document.createElement('button');
-  button.textContent = info.button;
-
-  container.appendChild(header);
-  container.appendChild(description);
-  container.appendChild(photo);
-  container.appendChild(title);
-  container.appendChild(button)
-  console.log(container)
-  return container;
+reader = {
+  name: "Elvie the Egg",
+  choices: [
+  1,
+  2,
+  4
+  ]
 }
 
-var holder = document.getElementById('holder');
-
-for (var i = 0; i < characters.characters.length; i++) {
-  var theCharacter = createCharacter(characters.characters[i]);
-  console.log(theCharacter)
-  holder.appendChild(theCharacter);
+reader = {
+  name: "Gervis the Hare",
+  choices: [
+  1,
+  3,
+  7
+  ]
 }
