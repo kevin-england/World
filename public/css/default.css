@@ -23,6 +23,7 @@
 
 .tabs:hover {
   color: #F0DB81;
+  text-shadow: 2px 2px 2px #0B1211;
   text-decoration: none;
 }
 
@@ -68,7 +69,6 @@
 .member-one {
   color: #A8B5B4;
   font-size: 70px;
-  font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 1px #0B1211;
 }
@@ -166,7 +166,6 @@
   background-color: #50958E;
   border: 2px solid #0B1211;
   color: #0B1211;
-  box-shadow: 3px 3px 1px #19675F;
   font-size: 25px;
   font-family: 'PT Sans', sans-serif;
   padding: 5px;
@@ -175,7 +174,87 @@
 
 .select:hover {
   background-color: #19675F;
+  box-shadow: 3px 3px 1px #19675F;
+  color: #F0DB81;
+  opacity: .8;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px #0B1211;
+}
+
+.story {
+  background-color: #50958E;
+  border: 2px solid #0B1211;
+  border-radius: 60px;
+  box-shadow: 10px 10px 5px #19675F;
+  margin: 20px;
+  padding: 20px;
+}
+ .story-title {
+  border-bottom: 1px solid #003630;
   color: #A8B5B4;
+  display: block;
+  font-size: 80px;
+  font-family: 'Tangerine', sans-serif;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #0B1211;
+}
+
+.story-content {
+  color: #A8B5B4;
+  font-size: 30px;
+  font-family: 'PT Sans', sans-serif;
+  padding: 20px;
+  text-align: left;
+  text-shadow: 1px 1px 1px #003630;
+}
+
+.story-image {
+  border: .5px solid #0B1211;
+  display: block;
+  padding: 5px;
+  opacity: .7;
+  border-radius: 1000px;
+  text-align: center;
+}
+
+.choice-one {
+  background-color: #19675F;
+  border: 2px solid #0B1211;
+  color: #0B1211;
+  display: inline-block;
+  font-size: 40px;
+  font-family: 'Tangerine', cursive;
+  margin: 20px;
+  padding: 30px;
+}
+
+.choice-two {
+  background-color: #19675F;
+  border: 2px solid #0B1211;
+  color: #0B1211;
+  display: inline-block;
+  font-size: 40px;
+  font-family: 'Tangerine', cursive;
+  margin: 20px;
+  padding: 30px;
+}
+
+.choice-one:hover {
+  background-color: #19675F;
+  box-shadow: 1px 1px 1px 1px #A8B5B4;
+  color: #F0DB81;
+  opacity: .8;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #0B1211;
+}
+
+.choice-two:hover {
+  background-color: #19675F;
+  box-shadow: 1px 1px 1px #A8B5B4;
+  color: #F0DB81;
+  opacity: .8;
   text-decoration: none;
   text-shadow: 1px 1px 1px #0B1211;
 }

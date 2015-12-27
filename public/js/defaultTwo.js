@@ -1,33 +1,57 @@
-function createHeader(text) {
-  var header = document.createElement('h' + text);
-  header.setAttribute('class', 'main');
-  var oneHeader = document.createTextNode('The Adventures in Orthia');
-  header.appendChild(oneHeader);
+var stories = { stories: [
+  { 
+    header: 'An egg on the Planet Orthia...', 
+    content: 'This will be the starting point for each of the characters',
+    image: 'images/vlax.jpg',
+    button: 'Go Left',
+    buttonOne: 'Go Right'
+  },
+  { 
+    header: 'A hare named Gervis is about to begin a race...', 
+    content: 'This will be the starting point for each of the characters',
+    image: 'images/octurnus.jpg',
+    button: 'Go Left',
+    buttonOne: 'Go Right'
+  }
+]};
 
-  document.body.appendChild(header);
+function createStory(info) {
+  var container = document.createElement('div');
+  container.setAttribute('class', 'col-md-12 story');
+
+  var header = document.createElement('h1');
+  header.setAttribute('class', 'story-title')
+  header.textContent = info.header;
+
+  var title = document.createElement('p');
+  title.setAttribute('class', 'story-content')
+  title.textContent = info.content;
+
+  var photo = document.createElement('img');
+  photo.setAttribute('src', info.image);
+  photo.setAttribute('class', 'story-image')
+
+  var button = document.createElement('button');
+  button.setAttribute('class', 'choice-one')
+  button.textContent = info.button;
+
+  var buttonOne = document.createElement('button');
+  buttonOne.setAttribute('class', 'choice-two')
+  buttonOne.textContent = info.buttonOne;
+
+  container.appendChild(header);
+  container.appendChild(title);
+  container.appendChild(photo);
+  container.appendChild(button);
+  container.appendChild(buttonOne)
+  console.log(container)
+  return container;
 }
 
-function createImage() {
-  var image = document.createElement('img');
-  image.setAttribute('src', 'images/home.jpg');
-  image.setAttribute('class', 'img-responsive home-image');
+var hold = document.getElementById('hold');
 
-  document.body.appendChild(image);
+for (var i = 0; i < stories.stories.length; i++) {
+  var theStory = createStory(stories.stories[i]);
+  console.log(theStory)
+  hold.appendChild(theStory);
 }
-
-function createTabs(text) {
-  var tabs = document.createElement('li' + text);
-  tabs.setAttribute('class', 'tabs')
-  var oneTab = document.createTextNode('Overview ');
-  var twoTab = document.createTextNode('Story ');
-  var threeTab = document.createTextNode('Login');
-  tabs.appendChild(oneTab);
-  tabs.appendChild(twoTab);
-  tabs.appendChild(threeTab);
-
-  document.body.appendChild(tabs);
-}
-
-createHeader()
-createTabs()
-createImage()

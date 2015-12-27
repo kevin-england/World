@@ -5,7 +5,7 @@ nameField.addEventListener('blur', function() {
     var newText = document.createTextNode('Your username must be at least 5 characters long');
     var element = document.createElement('span');
     var error = element.appendChild(newText);
-    document.getElementsByTagName('p')[0].appendChild(error);
+    document.getElementsByTagName('alert')[0].appendChild(error);
   }
 }, false);
 
@@ -16,7 +16,7 @@ emailField.addEventListener('blur', function() {
     var newText = document.createTextNode('Your email address must be at least 5 characters long');
     var element = document.createElement('span');
     var error = element.appendChild(newText);
-    document.getElementsByTagName('p')[1].appendChild(error);
+    document.getElementsByTagName('alert')[1].appendChild(error);
   }
 }, false);
 
@@ -27,7 +27,7 @@ passwordField.addEventListener('blur', function() {
     var newText = document.createTextNode('Your password must be at least 5 characters long');
     var element = document.createElement('span');
     var error = element.appendChild(newText);
-    document.getElementsByTagName('p')[2].appendChild(error);
+    document.getElementsByTagName('alert')[2].appendChild(error);
   }
 }, false);
 
