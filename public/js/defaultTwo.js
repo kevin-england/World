@@ -29,20 +29,20 @@ function createStory(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'story-image')
+  photo.setAttribute('class', 'col-md-3 col-md-offset-1 img-responsive story-image')
 
   var button = document.createElement('button');
-  button.setAttribute('class', 'choice-one')
+  button.setAttribute('class', 'col-md-3 choice-one')
   button.textContent = info.button;
 
   var buttonOne = document.createElement('button');
-  buttonOne.setAttribute('class', 'choice-two')
+  buttonOne.setAttribute('class', 'col-md-3 choice-two')
   buttonOne.textContent = info.buttonOne;
 
   container.appendChild(header);
   container.appendChild(title);
-  container.appendChild(photo);
   container.appendChild(button);
+  container.appendChild(photo);
   container.appendChild(buttonOne)
   console.log(container)
   return container;
