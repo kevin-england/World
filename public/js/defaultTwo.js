@@ -1,23 +1,23 @@
 var stories = { stories: [
   { 
-    header: 'An egg on the Planet Orthia...', 
-    content: 'This will be the starting point for each of the characters',
-    image: 'images/vlax.jpg',
-    button: 'Go Left',
-    buttonOne: 'Go Right'
+    header: 'An egg named Elvie begins to roll...', 
+    content: 'Elvie rolls down a hillside of the Orthian planes. Swerving from right to left, he comes to a split in his path. Which way will Elvie go?',
+    image: 'images/egg.jpg',
+    button: 'Continue down the hill',
+    buttonOne: 'Go towards an unexpected alleyway'
   },
   { 
-    header: 'A hare named Gervis is about to begin a race...', 
-    content: 'This will be the starting point for each of the characters',
-    image: 'images/octurnus.jpg',
-    button: 'Go Left',
-    buttonOne: 'Go Right'
+    header: 'A hare named Gervis has just begun a race...', 
+    content: 'The young hare has already gained a substantial lead and must decide what his next move will be. What is Gervis going to do?',
+    image: 'images/hare.jpg',
+    button: 'Take a quick break',
+    buttonOne: 'Use shortcut through random rabbit hole'
   }
 ]};
 
 function createStory(info) {
   var container = document.createElement('div');
-  container.setAttribute('class', 'col-md-12 story');
+  container.setAttribute('class', 'col-md-11 story');
 
   var header = document.createElement('h1');
   header.setAttribute('class', 'story-title')
