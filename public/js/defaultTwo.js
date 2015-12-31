@@ -1,28 +1,42 @@
 var stories = { stories: [
   { 
-    header: 'An egg named Elvie begins to roll...', 
-    content: 'Elvie rolls down a hillside shaped like a woman in a dress here on the spanning Orthian planes. Swerving from right to left, he comes to a split in his path. Which way will Elvie go?',
+    header: 'An egg named Elvie begins to roll. Elvie rolls down a hillside shaped like a woman in a dress, here on the spanning Orthian planes. Swerving from right to left, he comes to a split in his path.', 
+    content: 'Which way will Elvie go?',
     image: 'images/egg.jpg',
     button: 'Continue down the hill',
     buttonOne: 'Go towards an unexpected alleyway'
   },
   { 
-    header: 'A hare named Gervis has started a race...', 
-    content: 'The young hare has already gained a substantial lead and must decide what his next move will be. What is Gervis going to do?',
-    image: 'images/hare.jpg',
-    button: 'Take a quick break',
-    buttonOne: 'Use shortcut through random rabbit hole'
-  },
-  { 
-    header: 'Elvie continues on down the hill...', 
-    content: 'Elvie rolls down the hill and sees two Orthian unicorns parting ways. One is a big white Steed and the other was a black horn with a brown nose. Elvie wants to follow one, which unicorn will he follow?',
+    header: 'Elvie continues on down the hill. Elvie rolls down the hill and sees two Orthian unicorns parting ways. One is a big white steed and the other was a black horn with a brown nose. He decides he wants to follow one!', 
+    content: 'Which unicorn will Elvie follow?',
     image: 'images/eggOne.jpg',
     button: 'White Unicorn',
     buttonOne: 'Black Unicorn'
   },
   { 
-    header: 'Gervis goes through the rabbit hole...', 
-    content: 'As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian pistol shouting at him to get off his property! Uh oh, what will Gervis do now?',
+    header: 'Elvie follows the white unicorn. Elvie has rolled into an odd opening near a big raging fire. Elvie watches as the unicorn nods towards a big black metal item sitting atop the flames, telling Elvie this is where he must go.', 
+    content: 'Should Elvie enter the flames and listen to this crazy unicorn?',
+    image: 'images/eggTwo.jpg',
+    button: 'Maybe not',
+    buttonOne: 'Follow Blindly'
+  },
+  { 
+    header: 'Elvie follows the black unicorn. Elvie rolls into a giant cavern where he meets a gnome guarding the path. The gnome tells Elvie that he must make a choice between a carrot and a piece of lettuce before he lets him pass. If he chooses correctly, he may continue.', 
+    content: 'Which will Elvie choose?',
+    image: 'images/eggThree.jpg',
+    button: 'Carrot!',
+    buttonOne: 'Lettuce!'
+  },
+  { 
+    header: 'A hare named Gervis has started a race. Though the race has just begun, his opponent is now far behind. The young hare has already gained a substantial lead and must decide his next move.', 
+    content: 'What is Gervis going to do?',
+    image: 'images/hare.jpg',
+    button: 'Take a quick break',
+    buttonOne: 'Use shortcut through random rabbit hole'
+  },
+  { 
+    header: 'Gervis goes through the rabbit hole. As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian pistol shouting at him to get off his property!', 
+    content: 'Uh oh, what will Gervis do now?',
     image: 'images/hareOne.jpg',
     button: 'Run for the light!',
     buttonOne: 'Run back!'
@@ -43,7 +57,7 @@ function createStory(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'col-md-3 col-md-offset-1 img-responsive story-image')
+  photo.setAttribute('class', 'col-md-4 col-md-offset-1 img-responsive story-image')
 
   var button = document.createElement('button');
   button.setAttribute('class', 'col-md-3 choice-one')

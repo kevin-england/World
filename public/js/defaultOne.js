@@ -6,11 +6,6 @@ button.addEventListner('click', function(theEvent) {
   var choice = document.getElementById('choice');
   reader.choices.push(choice.input);
 
-  choice.input = {
-    1: 'Left'
-    2: 'Right'
-  }
-
   xhr.open('POST', '/story');
   xhr.send(reader);
 
