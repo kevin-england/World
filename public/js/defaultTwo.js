@@ -7,6 +7,13 @@ var stories = { stories: [
     buttonOne: 'Go towards an unexpected alleyway'
   },
   { 
+    header: 'Elvie decides to roll towards the unexpected alleyway. As he enters the small village from the alley, he feels a very cold breeze. There is a local inn nearby that looks to be quite comfortable, but he also sees a big heat lamp that the locals are standing near. Decisions, decisions.', 
+    content: 'Where will Elvie go?',
+    image: 'images/eggFour.jpg',
+    button: 'Enter the inn',
+    buttonOne: 'Keep warm under the heat lamp'
+  },
+  { 
     header: 'Elvie continues on down the hill. Elvie rolls down the hill and sees two Orthian unicorns parting ways. One is a big white steed and the other was a black horn with a brown nose. He decides he wants to follow one!', 
     content: 'Which unicorn will Elvie follow?',
     image: 'images/eggOne.jpg',
@@ -33,6 +40,13 @@ var stories = { stories: [
     image: 'images/hare.jpg',
     button: 'Take a quick break',
     buttonOne: 'Use shortcut through random rabbit hole'
+  },
+  { 
+    header: 'Gervis decides to take a quick break. As he dozes off for a nap, he is suddenly awakened by the scent of two different pastries. He can smell a delicious carrot cake wafting from the window of a nearby house and the smell of amazing pies coming from a local bakery named Pieoneers. Gervis cannot resist.', 
+    content: 'Which pastry should Gervis pursue?',
+    image: 'images/hareTwo.jpg',
+    button: 'Take the carrot cake',
+    buttonOne: 'Go to Pieoneers'
   },
   { 
     header: 'Gervis goes through the rabbit hole. As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian pistol shouting at him to get off his property!', 
