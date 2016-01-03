@@ -10,7 +10,7 @@ var characters = { characters: [
     name: 'Gervis the Hare', 
     description: 'Select and the race is on!',
     image: 'images/octurnus.jpg',
-    title: 'A Race on Planet Orthia',
+    title: 'A Race Through Planet Orthia',
     button: 'Get Started'
   }
 ]};
