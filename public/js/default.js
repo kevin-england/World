@@ -8,7 +8,7 @@ var characters = { characters: [
   },
   { 
     name: 'Gervis the Hare', 
-    description: 'Select and the race is on!',
+    description: 'Select and get Gervis racing!',
     image: 'images/octurnus.jpg',
     title: 'A Race Through Planet Orthia',
     button: 'Get Started'
