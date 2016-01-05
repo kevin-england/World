@@ -29,15 +29,15 @@ var stories = { stories: [
     content: 'Should Elvie enter the flames and listen to this crazy unicorn?',
     image: 'images/eggTwo.jpg',
     button: 'Maybe not',
-    buttonOne: 'Follow Blindly'
+    buttonOne: 'Follow blindly'
   },
   { 
     headerOne: 'The Rolling Egg',
-    header: 'Elvie follows the black unicorn. Elvie rolls into a giant cavern where he meets a gnome guarding the path. The gnome tells Elvie that he must make a choice between a carrot and a piece of lettuce before he lets him pass. If he chooses correctly, he may continue.', 
+    header: 'Elvie follows the black unicorn. Elvie rolls into a giant cavern where he meets a gnome guarding the path. The gnome tells Elvie that he must make a choice between a red potato and a blue onion before he lets him pass. If he chooses correctly, he may continue.', 
     content: 'Which will Elvie choose?',
     image: 'images/eggThree.jpg',
-    button: 'Carrot!',
-    buttonOne: 'Lettuce!'
+    button: 'Red potato!',
+    buttonOne: 'Blue onion!'
   },
   { 
     headerOne: 'A Race Through Planet Orthia',
@@ -140,6 +140,66 @@ var endings = { endings: [
     content: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, we can send you back to the beginning!',
     image: 'images/eggSix.jpg',
     button: 'Go back to beginning!',
+  },
+  { 
+    header: 'The Rolling Egg', 
+    content: 'Elvie decides he should not enter the fiery flames. As Elvie turns back, his egg begins cracking slowly. The egg shell crumbles and soon you realize Elvie is a pile of delicious scrambled eggs! What the?!',
+    image: 'images/eggEight.jpg',
+    button: 'Time to eat!',
+  },
+  { 
+    header: 'The Rolling Egg', 
+    content: 'Elvie decides to follow the white unicorn into the flames. When Elvie enters the center of the flames, his egg shell cracks and he turns into an enormous chicken. The unicorn transforms into President Lincoln and hops on his back. As the flames go out, they are in a city. Is this a dream?',
+    image: 'images/eggSeven.png',
+    button: 'Go back to beginning!',
+  },
+  { 
+    header: 'The Rolling Egg', 
+    content: 'Elvie takes the red potato. The gnome tells Elvie there is a difference between knowing the path and walking the path. All goes black and suddenly the little egg comes back to the light. Elvie has entered the matrix.',
+    image: 'images/eggNine.jpg',
+    button: 'Free your mind',
+  },
+  { 
+    header: 'The Rolling Egg', 
+    content: 'Elvie takes the blue onion, though it looks much different than any onion he had ever seen. After a few seconds, Elvie begins to feel faint and asks the gnome what was in the onion. Before he could answer, Elvie disappears and reappears near the top of the hill he started at. That was no onion!',
+    image: 'images/eggTen.jpg',
+    button: 'Go back to beginning!',
+  },
+  { 
+    header: 'A Race Through Planet Orthia', 
+    content: 'Elvie enters the inn. As Elvie enjoys the warmth from within, his egg slowly begins to crack. Is that a...Dragon? Look out, Elvie just burned you!',
+    image: 'images/eggFive.jpg',
+    button: 'You are burned to a crisp',
+  },
+  { 
+    header: 'A Race Through Planet Orthia', 
+    content: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, we can send you back to the beginning!',
+    image: 'images/eggSix.jpg',
+    button: 'Go back to beginning!',
+  },
+  { 
+    header: 'A Race Through Planet Orthia', 
+    content: 'Elvie decides he should not enter the fiery flames. As Elvie turns back, his egg begins cracking slowly. The egg shell crumbles and soon you realize Elvie is a pile of delicious scrambled eggs! What the?!',
+    image: 'images/eggEight.jpg',
+    button: 'Time to eat!',
+  },
+  { 
+    header: 'A Race Through Planet Orthia', 
+    content: 'Elvie decides to follow the white unicorn into the flames. When Elvie enters the center of the flames, his egg shell cracks and he turns into an enormous chicken. The unicorn transforms into President Lincoln and hops on his back. As the flames go out, they are in a city. Is this a dream?',
+    image: 'images/eggSeven.png',
+    button: 'Go back to beginning!',
+  },
+  { 
+    header: 'A Race Through Planet Orthia', 
+    content: 'Elvie takes the red potato. The gnome tells Elvie there is a difference between knowing the path and walking the path. All goes black and suddenly the little egg comes back to the light. Elvie has entered the matrix.',
+    image: 'images/eggNine.jpg',
+    button: 'Free your mind',
+  },
+  { 
+    header: 'A Race Through Planet Orthia', 
+    content: 'Elvie takes the blue onion, though it looks much different than any onion he had ever seen. After a few seconds, Elvie begins to feel faint and asks the gnome what was in the onion. Before he could answer, Elvie disappears and reappears near the top of the hill he started at. That was no onion!',
+    image: 'images/eggTen.jpg',
+    button: 'Go back to beginning!',
   }
 ]};
 
@@ -157,10 +217,10 @@ function createEnding(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'center-block img-responsive ending-image')
+  photo.setAttribute('class', 'col-md-8 img-responsive ending-image')
 
   var button = document.createElement('button');
-  button.setAttribute('class', 'center-block ending-button')
+  button.setAttribute('class', 'col-md-3 ending-button')
   button.textContent = info.button;
 
   container.appendChild(header);
