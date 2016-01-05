@@ -126,3 +126,55 @@ for (var i = 0; i < stories.stories.length; i++) {
   console.log(theStory)
   hold.appendChild(theStory);
 }
+
+
+var endings = { endings: [
+  { 
+    header: 'The Rolling Egg', 
+    content: 'Elvie enters the inn. As Elvie enjoys the warmth from within, his egg slowly begins to crack. Is that a...Dragon? Look out, Elvie just burned you!',
+    image: 'images/eggFive.jpg',
+    button: 'You are burned to a crisp',
+  },
+  { 
+    header: 'The Rolling Egg', 
+    content: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, we can send you back to the beginning!',
+    image: 'images/eggSix.jpg',
+    button: 'Go back to beginning!',
+  }
+]};
+
+function createEnding(info) {
+  var container = document.createElement('div');
+  container.setAttribute('class', 'col-md-11 ending');
+
+  var header = document.createElement('h1');
+  header.setAttribute('class', 'ending-title')
+  header.textContent = info.header;
+
+  var content = document.createElement('p');
+  content.setAttribute('class', 'ending-content')
+  content.textContent = info.content;
+
+  var photo = document.createElement('img');
+  photo.setAttribute('src', info.image);
+  photo.setAttribute('class', 'center-block img-responsive ending-image')
+
+  var button = document.createElement('button');
+  button.setAttribute('class', 'center-block ending-button')
+  button.textContent = info.button;
+
+  container.appendChild(header);
+  container.appendChild(content);
+  container.appendChild(photo);
+  container.appendChild(button);
+  console.log(container);
+  return container;
+}
+
+var hold = document.getElementById('hold');
+
+for (var i = 0; i < endings.endings.length; i++) {
+  var theEnding = createEnding(endings.endings[i]);
+  console.log(theEnding)
+  hold.appendChild(theEnding);
+}
