@@ -67,22 +67,50 @@
 }
 
 .member-one {
-  color: #A8B5B4;
-  font-size: 70px;
-  text-align: center;
-  text-shadow: 1px 1px 1px #0B1211;
+  border-bottom: 1px solid #F0DB81;
+  color: #0B1211;
+  font-size: 60px;
+  margin: 20px;
+  padding-bottom: 40px;
+  text-align: left;
+  text-shadow: 1px 1px 1px #A8B5B4;
 }
 
 .signin {
   font-size: 22px;
-  margin-left: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.start {
+  border-radius: 5px;
+  background-color: #A8B5B4;
+  border: 2px solid #0B1211;
+  color: #0B1211;
+  font-size: 22px;
+  font-family: 'PT Sans', sans-serif;
+  margin-left: 20px;
+  padding: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #50958E;
+}
+
+.start:hover {
+  background-color: #FFF7D4;
+  border: 2px solid #0B1211;
+  box-shadow: 3px 3px 1px #19675F;
+  color: #0B1211;
+  opacity: .8;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #50958E;
 }
 
 .account {
   color: #F0DB81;
-  font-size: 34px;
+  font-family: 'Tangerine', cursive;
+  font-size: 50px;
   margin-top: 10px;
-  text-align: left;
+  text-align: center;
   text-shadow: 1px 1px 1px #0B1211;
 }
 
@@ -96,6 +124,8 @@
   font-family: 'Tangerine', cursive;
   font-size: 70px;
   font-weight: bold;
+  margin: 20px;
+  margin-bottom: 30px;
   text-align: center;
   text-shadow: 1.5px 1.5px 1.5px #0B1211;
 }
@@ -241,7 +271,7 @@
   background-color: #50958E;
   border: 2px solid #0B1211;
   color: #0B1211;
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'PT Sans', sans-serif;
   margin-top: 100px;
   margin-left: 20px;
@@ -304,7 +334,6 @@
 }
 
 .ending-image {
-  display: block;
   padding: 30px;
   opacity: .6;
   border-radius: 100px;
@@ -312,7 +341,7 @@
 
 .ending-content {
   color: #A8B5B4;
-  font-size: 64px;
+  font-size: 60px;
   font-family: 'Tangerine', cursive;
   font-weight: bold;
   margin: 40px;
@@ -325,10 +354,10 @@
   background-color: #A8B5B4;
   border: 2px solid #0B1211;
   color: #0B1211;
-  display: block;
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'PT Sans', sans-serif;
-  margin-left: 20px;
+  margin-left: 120px;
+  margin-top: 120px;
   padding: 15px;
   text-shadow: 1px 1px 1px #50958E;
 }

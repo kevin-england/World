@@ -19,9 +19,5 @@ app.get('/story', bodyParser.json(), function(req, res) {
   };
 });
 
-app.post('/signup', bodyParser.json(), function (req, res) {
-  console.log(JSON.stringify(req.body, null, 2));
-});
-
 app.listen(1337);
 console.log('This server is now live!');
