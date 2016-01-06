@@ -209,10 +209,11 @@
   color: #0B1211;
   font-size: 60px;
   font-family: 'Tangerine', cursive;
+  font-weight: bold;
   margin: 40px;
   margin-top: 50px;
   text-align: center;
-  text-shadow: 1px 1px 1px #50958E;
+  text-shadow: 1.5px 1.5px 1.5px #50958E;
 }
 
 .story-question {
@@ -311,8 +312,9 @@
 
 .ending-content {
   color: #A8B5B4;
-  font-size: 60px;
+  font-size: 64px;
   font-family: 'Tangerine', cursive;
+  font-weight: bold;
   margin: 40px;
   text-align: center;
   text-shadow: 1px 1px 1px #0B1211;

@@ -137,7 +137,7 @@ var endings = { endings: [
   },
   { 
     header: 'The Rolling Egg', 
-    content: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, we can send you back to the beginning!',
+    content: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, that seemed to appease him! How about we start over?',
     image: 'images/eggSix.jpg',
     button: 'Go back to beginning!',
   },
@@ -149,7 +149,7 @@ var endings = { endings: [
   },
   { 
     header: 'The Rolling Egg', 
-    content: 'Elvie decides to follow the white unicorn into the flames. When Elvie enters the center of the flames, his egg shell cracks and he turns into an enormous chicken. The unicorn transforms into President Lincoln and hops on his back. As the flames go out, they are in a city. Is this a dream?',
+    content: 'Elvie decides to follow the white unicorn into the flames. When Elvie enters the center of the flames, his egg shell cracks and he turns into an enormous chicken. The unicorn transforms into President Lincoln and hops on his back. Orthia can be a very strange place.',
     image: 'images/eggSeven.png',
     button: 'Go back to beginning!',
   },
@@ -167,21 +167,21 @@ var endings = { endings: [
   },
   { 
     header: 'A Race Through Planet Orthia', 
-    content: 'Elvie enters the inn. As Elvie enjoys the warmth from within, his egg slowly begins to crack. Is that a...Dragon? Look out, Elvie just burned you!',
-    image: 'images/eggFive.jpg',
-    button: 'You are burned to a crisp',
+    content: 'Gervis runs for the light. As he exits the hole, he hears the sound of gun shots but makes haste to a ridge towards the finish line. The shortcut led straight to the finish and helped him win the race! He has finally beaten his arch-rival, the silver eyepatched Tuxedo Cheetah.',
+    image: 'images/hareFive.jpg',
+    button: 'You won the race!',
   },
   { 
     header: 'A Race Through Planet Orthia', 
-    content: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, we can send you back to the beginning!',
-    image: 'images/eggSix.jpg',
+    content: 'Gervis decides to go back. However, as he exits the hole he runs into a vicious looking bear wielding a shotgun and crazed look on his face. It is the owner following him out! Gervis only has one option at this point. That was not a good shortcut!',
+    image: 'images/hareSix.jpg',
     button: 'Go back to beginning!',
   },
   { 
     header: 'A Race Through Planet Orthia', 
-    content: 'Elvie decides he should not enter the fiery flames. As Elvie turns back, his egg begins cracking slowly. The egg shell crumbles and soon you realize Elvie is a pile of delicious scrambled eggs! What the?!',
-    image: 'images/eggEight.jpg',
-    button: 'Time to eat!',
+    content: 'Gervis eats the slice of carrot cake anyways. After continuing along his path, things start to get strange. He sees his nemesis the Tuxedo Cheetah, but he is a tiger now... He can also see the finish line, but it changes into a large bird soaring above a pyramid. Cake...Bad idea...',
+    image: 'images/hareSeven.jpg',
+    button: 'Too sick to continue',
   },
   { 
     header: 'A Race Through Planet Orthia', 
@@ -217,10 +217,10 @@ function createEnding(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'col-md-8 img-responsive ending-image')
+  photo.setAttribute('class', 'col-md-5 center-block img-responsive ending-image')
 
   var button = document.createElement('button');
-  button.setAttribute('class', 'col-md-3 ending-button')
+  button.setAttribute('class', 'col-md-3 center-block ending-button')
   button.textContent = info.button;
 
   container.appendChild(header);
