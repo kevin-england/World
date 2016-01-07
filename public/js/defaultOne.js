@@ -1,21 +1,7 @@
-var reader = {};
-reader.choices = [];
+var stories = {};
+stories.choices = [];
 
-var button = document.getElementById('button');
-button.addEventListener('click', function(theEvent) {
-  var choice = document.getElementById('choice');
-  reader.choices.push(choice.input);
-
-  xhr.open('POST', '/story');
-  xhr.send(reader);
-
-  xhr.addEventListener('load', function(theEvent) { 
-    var response = JSON.parse(xhr.responseText);
-    document.getElementById('passage').textContent = response.text;
-  })
-});
-
-reader = {
+stories = {
   name: "Elvie the Egg",
   choices: [
   1,
@@ -32,3 +18,17 @@ reader = {
   7
   ]
 }
+
+var button = document.getElementById('button');
+button.addEventListener('click', function(theEvent) {
+  var choice = document.getElementById('choice');
+  stories.choices.push(choice.input);
+
+  xhr.open('POST', '/story');
+  xhr.send(stories);
+
+  xhr.addEventListener('load', function(theEvent) { 
+    var response = JSON.parse(xhr.responseText);
+    document.getElementById('passage').textContent = response.text;
+  })
+});

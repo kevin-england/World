@@ -1,0 +1,28 @@
+{
+  "name": "world",
+  "version": "1.0.0",
+  "description": "A unique web-based world for users who want to learn about this world by taking an interactive story adventure",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "r": "^0.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-england/World.git"
+  },
+  "keywords": [
+    "orthia"
+  ],
+  "author": "kevin england",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevin-england/World/issues"
+  },
+  "homepage": "https://github.com/kevin-england/World#readme"
+}

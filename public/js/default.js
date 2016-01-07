@@ -36,7 +36,7 @@ function createCharacter(info) {
   description.textContent = info.description;
 
   var button = document.createElement('button');
-  button.setAttribute('class', 'select')
+  button.setAttribute('class', 'select');
   button.textContent = info.button;
 
   container.appendChild(header);
@@ -271,10 +271,12 @@ function createStory(info) {
   var containerTwo = document.createElement('div')
 
   var buttonText = document.createElement('span');
+  buttonText.setAttribute('id', 'button')
   buttonText.textContent = info.buttonText;
 
   var choices = document.createElement('button');
   choices.setAttribute('class', 'col-md-3 choice');
+  buttonText.setAttribute('id', 'choice')
   choices.textContent = info.choices;
 
   container.appendChild(containerOne);
