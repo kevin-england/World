@@ -122,7 +122,7 @@ var stories = { stories: [
   },
   { 
     header: 'A Race Through Planet Orthia',
-    subheader: 'Gervis goes through the rabbit hole. As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian pistol shouting at him to get off his property!', 
+    subheader: 'Gervis goes through the cavern. As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian pistol shouting at him to get off his property!', 
     content: 'Uh oh, what will Gervis do now?',
     image: 'images/hareOne.jpg',
     buttonText: ['Run for the light!', 'Run back!']
@@ -169,7 +169,6 @@ for (var i = 0; i < stories.stories.length; i++) {
   console.log(theStory)
   hold.appendChild(theStory);
 }
-
 
 var endings = { endings: [
   { 
@@ -281,3 +280,35 @@ for (var i = 0; i < endings.endings.length; i++) {
   console.log(theEnding)
   hold.appendChild(theEnding);
 }
+
+function hideContent(){
+    var content = document.getElementById('hold');    
+    content.style.display = 'none';
+}
+
+hideContent()
+
+var sections = sections [ 
+  {sections:[0, 1, 2]},
+  {sections:[1, 10, 11]},
+  {sections:[2, 3, 4]},
+  {sections:[3, 12, 13]},
+  {sections:[4, 14, 15]},
+  {sections:[5, 6, 9]},
+  {sections:[6, 7, 8]},
+  {sections:[7, 18, 19]},
+  {sections:[8, 20, 21]},
+  {sections:[9, 16, 17]},
+  {sections:[10, 0]},
+  {sections:[11, 0]},
+  {sections:[12, 0]},
+  {sections:[13, 0]},
+  {sections:[14, 0]},
+  {sections:[15, 0]},
+  {sections:[16, 1]},
+  {sections:[17, 1]},
+  {sections:[18, 1]},
+  {sections:[19, 1]},
+  {sections:[20, 1]},
+  {sections:[21, 1]}
+];

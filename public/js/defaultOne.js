@@ -2,14 +2,14 @@ var reader = {};
 reader.choices = [];
 
 var button = document.getElementById('button');
-button.addEventListner('click', function(theEvent) {
+button.addEventListener('click', function(theEvent) {
   var choice = document.getElementById('choice');
   reader.choices.push(choice.input);
 
   xhr.open('POST', '/story');
   xhr.send(reader);
 
-  xhr.addEventListner('load', function(theEvent) { 
+  xhr.addEventListener('load', function(theEvent) { 
     var response = JSON.parse(xhr.responseText);
     document.getElementById('passage').textContent = response.text;
   })
