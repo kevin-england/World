@@ -139,7 +139,7 @@
   text-shadow: 3px 3px 3px #003630;
 }
 
-.options {
+.character {
   background-color: #A8B5B4;
   border: 2px solid #0B1211;
   border-radius: 60px;
@@ -191,7 +191,7 @@
   text-shadow: 1px 1px 1px #50958E;
 }
 
-.select {
+.character-button {
   background-color: #50958E;
   border: 2px solid #0B1211;
   border-radius: 1000px;
@@ -202,7 +202,7 @@
   text-shadow: 1px 1px 1px #A8B5B4;
 }
 
-.select:hover {
+.character-button:hover {
   background-color: #19675F;
   box-shadow: 3px 3px 1px #50958E;
   color: #F0DB81;

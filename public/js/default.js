@@ -1,5 +1,6 @@
 var characters = { characters: [
   { 
+    id: 1,
     name: 'Elvie the Egg', 
     description: 'Select and watch Elvie roll!',
     image: 'images/vlax.jpg',
@@ -7,6 +8,7 @@ var characters = { characters: [
     button: 'Get Rolling'
   },
   { 
+    id: 2,
     name: 'Gervis the Hare', 
     description: 'Select and get Gervis racing!',
     image: 'images/octurnus.jpg',
@@ -15,9 +17,15 @@ var characters = { characters: [
   }
 ]};
 
+
+var state = {
+  characters: null,
+  stories: 0,
+};
+
 function createCharacter(info) {
   var container = document.createElement('div');
-  container.setAttribute('class', 'col-md-5 options');
+  container.setAttribute('class', 'col-md-5 character');
 
   var header = document.createElement('h1');
   header.setAttribute('class', 'character-name')
@@ -36,7 +44,8 @@ function createCharacter(info) {
   description.textContent = info.description;
 
   var button = document.createElement('button');
-  button.setAttribute('class', 'select');
+  button.setAttribute('class', 'character-button');
+  button.setAttribute('data-character', info.id)
   button.textContent = info.button;
 
   container.appendChild(header);
@@ -271,13 +280,18 @@ function createStory(info) {
   var containerTwo = document.createElement('div')
 
   var buttonText = document.createElement('span');
-  buttonText.setAttribute('id', 'button')
   buttonText.textContent = info.buttonText;
 
   var choices = document.createElement('button');
   choices.setAttribute('class', 'col-md-3 choice');
-  buttonText.setAttribute('id', 'choice')
-  choices.textContent = info.choices;
+  choices.setAttribute('data-choice', info.id)
+
+  for (var i = 0; i < info.choices.length; i++) {
+  var chapterButtons = document.createElement('button')
+  chapterButtons.getAttribute('data-choice', info.id[i]);
+  choices.appendChild(buttonText)
+  chapterButtons.appendChild(choices)
+  }
 
   container.appendChild(containerOne);
   containerOne.appendChild(header);
@@ -286,7 +300,6 @@ function createStory(info) {
   containerOne.appendChild(photo);
   containerOne.appendChild(containerTwo);
   containerTwo.appendChild(choices);
-  choices.appendChild(buttonText);
   console.log(container);
   return container;
 }
@@ -299,14 +312,14 @@ for (var i = 0; i < stories.stories.length; i++) {
   hold.appendChild(theStory);
 }
 
-function hideContent(){
+/* function hideContent(){
    var content = document.getElementById('hold');    
    content.style.display = 'none';
 }
 
-hideContent()
+hideContent() */
 
-var sections = sections [ 
+var sections = { sections: [ 
   {sections:[0, 1, 2]}, /* 0 is starting point for Elvie */
   {sections:[1, 10, 11]},
   {sections:[2, 3, 4]},
@@ -329,4 +342,11 @@ var sections = sections [
   {sections:[19, 5]},
   {sections:[20, 5]},
   {sections:[21, 5]}
-];
+]};
+
+var characterButtons = document.getElementsByClassName('character-button');
+for(var i = 0; i < characterButtons.length; i++) {
+  characterButtons[i].addEventListener('click', function(theEvent) {
+    state.characters = theEvent.target.getAttribute('data-character')
+  })
+};
