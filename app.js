@@ -5,6 +5,5 @@ var path = require('path');
 
 app.use('/', express.static('public')); 
 
-
 app.listen(1337);
 console.log('This server is now live!');

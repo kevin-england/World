@@ -17,7 +17,6 @@ var characters = { characters: [
   }
 ]};
 
-
 var state = {
   characters: null,
   stories: 0,
@@ -47,6 +46,17 @@ function createCharacter(info) {
   button.setAttribute('class', 'character-button');
   button.setAttribute('data-character', info.id)
   button.textContent = info.button;
+  button.addEventListener('click', function() {
+    var choiceHolder = document.getElementById('holder');
+    choiceHolder.innerHTML = '';
+      if (button.getAttribute('data-character') == 1) {
+        var chapters = document.getElementById('chap-0');
+        chapters.style.display = 'block';
+    } else {
+        var chapter = document.getElementById('chap-5');
+        chapter.style.display = 'block';
+    }
+  }, false);
 
   container.appendChild(header);
   container.appendChild(description);
@@ -57,12 +67,20 @@ function createCharacter(info) {
   return container;
 }
 
-var holder = document.getElementById('holder');
+function content() {
+  var holder = document.getElementById('holder');
+  
+  for (var i = 0; i < characters.characters.length; i++) {
+    var theCharacter = createCharacter(characters.characters[i]);
+    holder.appendChild(theCharacter);
+  };
 
-for (var i = 0; i < characters.characters.length; i++) {
-  var theCharacter = createCharacter(characters.characters[i]);
-  console.log(theCharacter)
-  holder.appendChild(theCharacter);
+  var hold = document.getElementById('hold');
+
+  for (var i = 0; i < stories.stories.length; i++) {
+    var theStory = createStory(stories.stories[i]);
+    hold.appendChild(theStory);
+  };
 }
 
 var stories = { stories: [
@@ -258,6 +276,8 @@ var stories = { stories: [
 function createStory(info) {
   var container = document.createElement('div');
   container.setAttribute('class', 'col-md-11 story');
+  container.setAttribute('id', 'chap-' + info.id);
+  container.style.display = 'none';
 
   var header = document.createElement('h1');
   header.setAttribute('class', 'story-title');
@@ -278,19 +298,17 @@ function createStory(info) {
   photo.setAttribute('class', 'col-md-6 img-responsive story-image');
 
   var containerTwo = document.createElement('div')
+  containerTwo.setAttribute('id', 'button-holder')
 
-  var buttonText = document.createElement('span');
-  buttonText.textContent = info.buttonText;
-
-  var choices = document.createElement('button');
-  choices.setAttribute('class', 'col-md-3 choice');
+  var choices = document.createElement('span');
   choices.setAttribute('data-choice', info.id)
 
   for (var i = 0; i < info.choices.length; i++) {
-  var chapterButtons = document.createElement('button')
-  chapterButtons.getAttribute('data-choice', info.id[i]);
-  choices.appendChild(buttonText)
-  chapterButtons.appendChild(choices)
+    var chapterButtons = document.createElement('button');
+    chapterButtons.setAttribute('class', 'col-md-3 choice');
+    chapterButtons.setAttribute('data-choice', info.id[i]);
+    chapterButtons.textContent = info.buttonText[i];
+    choices.appendChild(chapterButtons)
   }
 
   container.appendChild(containerOne);
@@ -304,49 +322,28 @@ function createStory(info) {
   return container;
 }
 
-var hold = document.getElementById('hold');
-
-for (var i = 0; i < stories.stories.length; i++) {
-  var theStory = createStory(stories.stories[i]);
-  console.log(theStory)
-  hold.appendChild(theStory);
-}
-
-/* function hideContent(){
-   var content = document.getElementById('hold');    
-   content.style.display = 'none';
-}
-
-hideContent() */
-
-var sections = { sections: [ 
-  {sections:[0, 1, 2]}, /* 0 is starting point for Elvie */
-  {sections:[1, 10, 11]},
-  {sections:[2, 3, 4]},
-  {sections:[3, 12, 13]},
-  {sections:[4, 14, 15]},
-  {sections:[5, 6, 9]}, /* 5 is starting point for Gervis */
-  {sections:[6, 7, 8]},
-  {sections:[7, 18, 19]},
-  {sections:[8, 20, 21]},
-  {sections:[9, 16, 17]},
-  {sections:[10, 0]},
-  {sections:[11, 0]},
-  {sections:[12, 0]},
-  {sections:[13, 0]},
-  {sections:[14, 0]},
-  {sections:[15, 0]},
-  {sections:[16, 5]},
-  {sections:[17, 5]},
-  {sections:[18, 5]},
-  {sections:[19, 5]},
-  {sections:[20, 5]},
-  {sections:[21, 5]}
-]};
-
 var characterButtons = document.getElementsByClassName('character-button');
 for(var i = 0; i < characterButtons.length; i++) {
   characterButtons[i].addEventListener('click', function(theEvent) {
     state.characters = theEvent.target.getAttribute('data-character')
   })
 };
+
+var chapterButtons = document.getElementsByClassName('choice');
+for(var i = 0; i < chapterButtons.length; i++) {
+  chapterButtons[i].addEventListener('click', function(theEvent) {
+    console.log(theEvent.target.getAttribute('data-choice', info.id[i]))
+  })
+};
+
+content();
+
+/*
+var requestStory = function requestStory(characters, stories) {
+  e.target = target.state[];
+  requestStory.addEventListener('click', function()
+    if ('click' === "BUTTON") {
+      state.getAttribute('data-character').getAttribute('data-choice');
+    };
+  ,);
+} */
