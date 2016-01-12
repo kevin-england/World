@@ -17,11 +17,6 @@ var characters = { characters: [
   }
 ]};
 
-var state = {
-  characters: null,
-  stories: 0,
-};
-
 function createCharacter(info) {
   var container = document.createElement('div');
   container.setAttribute('class', 'col-md-5 character');
@@ -36,7 +31,7 @@ function createCharacter(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'character-image')
+  photo.setAttribute('class', 'img-responsive character-image')
 
   var description = document.createElement('p');
   description.setAttribute('class', 'description')
@@ -251,7 +246,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis decides to finish the race. He tells the owner he will have to take a raincheck and dashes out the door. Exiting, his whole world changes color and he notices Pieoneers has vanished. Suddenly, an alarm clock is buzzing loudly and Gervis awakens abruptly.',
     image: 'images/hareTen.jpg',
-    buttonText: 'Go back to beginning!',
+    buttonText: 'Go back to the beginning!',
     choices: [5]
   }
 ]};
@@ -268,6 +263,7 @@ function createStory(info) {
   header.textContent = info.header;
 
   var containerOne = document.createElement('div');
+  containerOne.setAttribute('class', 'center-block')
 
   var subheader = document.createElement('h1');
   subheader.setAttribute('class', 'story-content');
@@ -279,24 +275,25 @@ function createStory(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'col-md-6 img-responsive story-image');
+  photo.setAttribute('class', 'col-md-6 col-md-offset-3 img-responsive story-image');
 
-  var containerTwo = document.createElement('div')
-  containerTwo.setAttribute('id', 'button-holder')
+  var containerTwo = document.createElement('div');
+  containerTwo.setAttribute('id', 'button-holder');
 
   var choices = document.createElement('span');
-  choices.setAttribute('data-choice', info.id)
+  choices.setAttribute('data-choice', info.id);
 
   for (var i = 0; i < info.choices.length; i++) {
     var chapterButtons = document.createElement('button');
-    chapterButtons.setAttribute('class', 'col-md-3 choice');
+    chapterButtons.setAttribute('class', 'col-md-5 choice');
     chapterButtons.setAttribute('data-choice', info.choices[i]);
     chapterButtons.textContent = info.buttonText[i];
     chapterButtons.addEventListener('click', function() {
       var choiceHolder = document.getElementById('chap-' + info.id);
       choiceHolder.style.display = 'none';
-      var choice = info.choices[i];
-      choice.style.display = 'block';
+      var choice = chapterButtons.getAttribute('data-choice', info.choices[i]);
+      var theChoice = document.getElementById('chap-' + choice);
+      theChoice.style.display = 'block';
     }, false);
     choices.appendChild(chapterButtons)
   }
@@ -311,13 +308,6 @@ function createStory(info) {
   console.log(container);
   return container;
 }
-
-var characterButtons = document.getElementsByClassName('character-button');
-for(var i = 0; i < characterButtons.length; i++) {
-  characterButtons[i].addEventListener('click', function(theEvent) {
-    state.characters = theEvent.target.getAttribute('data-character')
-  })
-};
 
 function content() {
   var holder = document.getElementById('holder');
