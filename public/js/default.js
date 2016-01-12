@@ -67,22 +67,6 @@ function createCharacter(info) {
   return container;
 }
 
-function content() {
-  var holder = document.getElementById('holder');
-  
-  for (var i = 0; i < characters.characters.length; i++) {
-    var theCharacter = createCharacter(characters.characters[i]);
-    holder.appendChild(theCharacter);
-  };
-
-  var hold = document.getElementById('hold');
-
-  for (var i = 0; i < stories.stories.length; i++) {
-    var theStory = createStory(stories.stories[i]);
-    hold.appendChild(theStory);
-  };
-}
-
 var stories = { stories: [
   { 
     id: 0,
@@ -132,7 +116,7 @@ var stories = { stories: [
   { 
     id: 5,
     header: 'A Race Through Planet Orthia',
-    subheader: 'A hare named Gervis has started a race. Though the race has just begun, his opponent is now far behind. The young hare has already gained a substantial lead and must decide his next move.', 
+    subheader: 'A hare named Gervis has started a race. Though the race has just begun, his opponent is now far behind. The young hare is feeling pretty sleepy, but sees a cavern that could be a shortcut nearby.', 
     content: 'What is Gervis going to do?',
     image: 'images/hare.jpg',
     buttonText: ['Take a quick break', 'Use shortcut through random cavern'],
@@ -306,8 +290,14 @@ function createStory(info) {
   for (var i = 0; i < info.choices.length; i++) {
     var chapterButtons = document.createElement('button');
     chapterButtons.setAttribute('class', 'col-md-3 choice');
-    chapterButtons.setAttribute('data-choice', info.id[i]);
+    chapterButtons.setAttribute('data-choice', info.choices[i]);
     chapterButtons.textContent = info.buttonText[i];
+    chapterButtons.addEventListener('click', function() {
+      var choiceHolder = document.getElementById('chap-' + info.id);
+      choiceHolder.style.display = 'none';
+      var choice = info.choices[i];
+      choice.style.display = 'block';
+    }, false);
     choices.appendChild(chapterButtons)
   }
 
@@ -329,21 +319,20 @@ for(var i = 0; i < characterButtons.length; i++) {
   })
 };
 
-var chapterButtons = document.getElementsByClassName('choice');
-for(var i = 0; i < chapterButtons.length; i++) {
-  chapterButtons[i].addEventListener('click', function(theEvent) {
-    console.log(theEvent.target.getAttribute('data-choice', info.id[i]))
-  })
-};
+function content() {
+  var holder = document.getElementById('holder');
+  
+  for (var i = 0; i < characters.characters.length; i++) {
+    var theCharacter = createCharacter(characters.characters[i]);
+    holder.appendChild(theCharacter);
+  };
+
+  var hold = document.getElementById('hold');
+
+  for (var i = 0; i < stories.stories.length; i++) {
+    var theStory = createStory(stories.stories[i]);
+    hold.appendChild(theStory);
+  };
+}
 
 content();
-
-/*
-var requestStory = function requestStory(characters, stories) {
-  e.target = target.state[];
-  requestStory.addEventListener('click', function()
-    if ('click' === "BUTTON") {
-      state.getAttribute('data-character').getAttribute('data-choice');
-    };
-  ,);
-} */
