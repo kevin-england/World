@@ -111,7 +111,7 @@ var stories = { stories: [
   { 
     id: 5,
     header: 'A Race Through Planet Orthia',
-    subheader: 'A hare named Gervis has started a race. Though the race has just begun, his opponent is now far behind. The young hare is feeling pretty sleepy, but sees a cavern that could be a shortcut nearby.', 
+    subheader: 'A hare named Gervis has started a race through Orthia. Though the race has just begun, his opponent is now far behind. The young hare is feeling pretty sleepy, but sees a cavern that could be a shortcut nearby.', 
     content: 'What is Gervis going to do?',
     image: 'images/hare.jpg',
     buttonText: ['Take a quick break', 'Use shortcut through random cavern'],
@@ -147,7 +147,7 @@ var stories = { stories: [
   { 
     id: 9,
     header: 'A Race Through Planet Orthia',
-    subheader: 'Gervis goes through the cavern. As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian pistol shouting at him to get off his property!', 
+    subheader: 'Gervis goes through the cavern. As Gervis enters the hole, he can see the light from the other side of his shortcut. The problem is the owner has just come out with an Orthian shotgun shouting at him to get off his property!', 
     content: 'Uh oh, what will Gervis do now?',
     image: 'images/hareOne.jpg',
     buttonText: ['Run for the light!', 'Run back!'],
@@ -158,7 +158,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie enters the inn. As Elvie enjoys the warmth from within, his egg slowly begins to crack. Is that a...Dragon? Look out, Elvie just burned you!',
     image: 'images/eggFive.jpg',
-    buttonText: 'You are burned to a crisp',
+    buttonText: ['You are burned to a crisp'],
     choices: [0]
   },
   { 
@@ -166,7 +166,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie chooses to sit under heat lamp. After thirty seconds, Elvie hatches into a human toddler demanding you buy them a cellphone... Hm, that seemed to appease him! How about we start over?',
     image: 'images/eggSix.jpg',
-    buttonText: 'Go back to beginning!',
+    buttonText: ['Go back to beginning!'],
     choices: [0]
   },
   { 
@@ -174,7 +174,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie decides he should not enter the fiery flames. As Elvie turns back, his egg begins cracking slowly. The egg shell crumbles and soon you realize Elvie is a pile of delicious scrambled eggs! What the?!',
     image: 'images/eggEight.jpg',
-    buttonText: 'Time to eat!',
+    buttonText: ['Time to eat!'],
     choices: [0]
   },
   { 
@@ -182,7 +182,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie decides to follow the white unicorn into the flames. When Elvie enters the center of the flames, his egg shell cracks and he turns into an enormous chicken. The unicorn transforms into President Lincoln and hops on his back. Orthia can be a very strange place.',
     image: 'images/eggSeven.png',
-    buttonText: 'Go back to beginning!',
+    buttonText: ['Go back to beginning!'],
     choices: [0]
   },
   { 
@@ -190,7 +190,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie takes the red potato. The gnome tells Elvie there is a difference between knowing the path and walking the path. All goes black and suddenly the little egg comes back to the light. Elvie has entered the matrix.',
     image: 'images/eggNine.jpg',
-    buttonText: 'Free your mind',
+    buttonText: ['Free your mind'],
     choices: [0]
   },
   { 
@@ -198,7 +198,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie takes the blue onion, though it looks much different than any onion he had ever seen. After a few seconds, Elvie begins to feel faint and asks the gnome what was in the onion. Before he could answer, Elvie disappears and reappears near the top of the hill he started at. That was no onion!',
     image: 'images/eggTen.jpg',
-    buttonText: 'Go back to beginning!',
+    buttonText: ['Go back to beginning!'],
     choices: [0]
   },
   { 
@@ -206,7 +206,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis runs for the light. As he exits the hole, he hears the sound of gun shots but makes haste to a ridge towards the finish line. The shortcut led straight to the finish and helped him win the race! He has finally beaten his arch-rival, the silver eyepatched Tuxedo Cheetah.',
     image: 'images/hareFive.jpg',
-    buttonText: 'You won the race!',
+    buttonText: ['You won the race!'],
     choices: [5]
   },
   { 
@@ -214,7 +214,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis decides to go back. However, as he exits the hole he runs into a vicious looking bear wielding a shotgun and crazed look on his face. It is the owner following him out! Gervis only has one option at this point. That was not a good shortcut!',
     image: 'images/hareSix.jpg',
-    buttonText: 'Go back to beginning!',
+    buttonText: ['Go back to beginning!'],
     choices: [5]
   },
   { 
@@ -222,7 +222,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis eats the slice of carrot cake anyways. After continuing along his path, things start to get strange. He sees his nemesis the Tuxedo Cheetah, but he is a tiger now... Now he sees the finish line, but it changes into a large bird soaring above a pyramid. Cake...Bad idea...',
     image: 'images/hareSeven.jpg',
-    buttonText: 'Too sick to continue',
+    buttonText: ['Too sick to continue'],
     choices: [5]
   },
   { 
@@ -230,7 +230,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis speaks to the large insect sitting next to the piece of carrot cake. After a short conversation, the bug reveals itself to be the notorious Orthian Magician and places a powerful spell on Gervis. The next thing Gervis knows he is starting the race over again. Was that time travel??',
     image: 'images/HareEight.jpg',
-    buttonText: 'Go back to beginning!',
+    buttonText: ['Go back to beginning!'],
     choices: [5]
   },
   { 
@@ -238,7 +238,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis decides that one bite really could not hurt. One bite into the famous Pieoneers pie and Gervis looked like a cat on catnip, except one that turned into a big rampaging monster! There was not enough pie that day to keep this monster at bay, a story told to this day by the Pieoneers owner.',
     image: 'images/hareNine.jpg',
-    buttonText: 'Food coma time!',
+    buttonText: ['Food coma time!'],
     choices: [5]
   },
   { 
@@ -246,7 +246,7 @@ var stories = { stories: [
     header: 'A Race Through Planet Orthia', 
     subheader: 'Gervis decides to finish the race. He tells the owner he will have to take a raincheck and dashes out the door. Exiting, his whole world changes color and he notices Pieoneers has vanished. Suddenly, an alarm clock is buzzing loudly and Gervis awakens abruptly.',
     image: 'images/hareTen.jpg',
-    buttonText: 'Go back to the beginning!',
+    buttonText: ['Go back to the beginning!'],
     choices: [5]
   }
 ]};
@@ -275,7 +275,7 @@ function createStory(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'col-md-6 col-md-offset-3 img-responsive story-image');
+  photo.setAttribute('class', 'col-md-5 col-md-offset-4 img-responsive story-image');
 
   var containerTwo = document.createElement('div');
   containerTwo.setAttribute('id', 'button-holder');
@@ -291,9 +291,9 @@ function createStory(info) {
     chapterButtons.addEventListener('click', function() {
       var choiceHolder = document.getElementById('chap-' + info.id);
       choiceHolder.style.display = 'none';
-      var choice = chapterButtons.getAttribute('data-choice', info.choices[i]);
-      var theChoice = document.getElementById('chap-' + choice);
-      theChoice.style.display = 'block';
+      console.log(info.choices[i])
+      var choice = document.getElementById('chap-' + this.getAttribute('data-choice'));
+      choice.style.display = 'block';
     }, false);
     choices.appendChild(chapterButtons)
   }
