@@ -47,9 +47,13 @@ function createCharacter(info) {
       if (button.getAttribute('data-character') == 1) {
         var chapters = document.getElementById('chap-0');
         chapters.style.display = 'block';
+        var choose = document.getElementById('selection');
+        choose.style.display = 'none';
     } else {
         var chapter = document.getElementById('chap-5');
         chapter.style.display = 'block';
+        var choose = document.getElementById('selection');
+        choose.style.display = 'none';
     }
   }, false);
 
@@ -275,7 +279,7 @@ function createStory(info) {
 
   var photo = document.createElement('img');
   photo.setAttribute('src', info.image);
-  photo.setAttribute('class', 'col-md-5 col-md-offset-4 img-responsive story-image');
+  photo.setAttribute('class', 'col-md-6 col-md-offset-3 img-responsive story-image');
 
   var containerTwo = document.createElement('div');
   containerTwo.setAttribute('id', 'button-holder');
@@ -291,6 +295,8 @@ function createStory(info) {
     chapterButtons.addEventListener('click', function() {
       var choiceHolder = document.getElementById('chap-' + info.id);
       choiceHolder.style.display = 'none';
+      var choose = document.getElementById('selection');
+      choose.style.display = 'none';
       console.log(info.choices[i])
       var choice = document.getElementById('chap-' + this.getAttribute('data-choice'));
       choice.style.display = 'block';
