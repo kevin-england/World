@@ -12,13 +12,13 @@
 .tabs {
   color: #A8B5B4;
   display: inline;
-  font-size: 35px;
+  font-size: 45px;
   font-family: 'PT Sans', sans-serif;
   list-style-type: none;
   text-decoration: none;
   text-shadow: 1px 1px 1px #0B1211;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 60px;
 }
 
 .tabs:hover {
@@ -28,20 +28,13 @@
 }
 
 .nav {
-  border-bottom: 1px solid #50958E;
-  text-align: right;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-
-.nav-one {
   background-color: #50958E;
   border: 2px solid #003630;
   box-shadow: 10px 10px 5px #A8B5B4;
   text-align: right;
   margin-bottom: 20px;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
   padding-top: 20px;
   padding-bottom: 20px;
 }

@@ -315,6 +315,22 @@ function createStory(info) {
   return container;
 }
 
+
+var start = document.getElementById('select')
+  start.addEventListener('click', function() {
+    var content = document.getElementById('home');    
+    content.style.display = 'none';
+    var newContent = document.getElementById('characters');    
+    newContent.style.display = 'block';
+  }, false);
+
+function hideContent(){
+   var content = document.getElementById('characters');    
+   content.style.display = 'none';
+}
+
+hideContent()
+
 function content() {
   var holder = document.getElementById('holder');
   
