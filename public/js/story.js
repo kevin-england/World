@@ -1,0 +1,1 @@
+//Plan to pull all object information from backend and send to front end

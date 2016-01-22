@@ -56,17 +56,19 @@
   font-family: 'PT Sans', sans-serif;
   margin: 20px;
   padding: 20px;
+  padding-bottom: 30px;
   text-align: right;
 }
 
 .member-one {
   border-bottom: 1px solid #F0DB81;
   color: #0B1211;
-  font-size: 60px;
+  font-size: 67px;
+  font-weight: bold;
   margin: 20px;
   padding-bottom: 40px;
-  text-align: left;
-  text-shadow: 1px 1px 1px #A8B5B4;
+  text-align: center;
+  text-shadow: 1.5px 1.5px 1.5px #A8B5B4;
 }
 
 .signin {
@@ -79,9 +81,12 @@
   background-color: #A8B5B4;
   border: 2px solid #0B1211;
   color: #0B1211;
-  font-size: 22px;
+  font-size: 30px;
   font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
   padding: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
   text-align: center;
   text-shadow: 1px 1px 1px #50958E;
 }
