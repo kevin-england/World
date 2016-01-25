@@ -125,6 +125,7 @@ function createStory(info) {
   return container;
 }
 
+
 var start = document.getElementById('select')
   start.addEventListener('click', function() {
     var content = document.getElementById('home');    
