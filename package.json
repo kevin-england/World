@@ -18,7 +18,8 @@
     "url": "git+https://github.com/kevin-england/World.git"
   },
   "keywords": [
-    "orthia"
+    "orthia",
+    "world"
   ],
   "author": "kevin england",
   "license": "ISC",
