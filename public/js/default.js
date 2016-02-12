@@ -329,8 +329,6 @@ function hideContent(){
    content.style.display = 'none';
 }
 
-hideContent()
-
 function content() {
   var holder = document.getElementById('holder');
   
@@ -347,4 +345,5 @@ function content() {
   };
 }
 
+hideContent()
 content();
