@@ -118,7 +118,7 @@ var stories = { stories: [
     subheader: 'A hare named Gervis has started a race through Orthia. Though the race has just begun, his opponent is now far behind. The young hare is feeling pretty sleepy, but sees a cavern that could be a shortcut nearby.', 
     content: 'What is Gervis going to do?',
     image: 'images/hare.jpg',
-    buttonText: ['Take a quick break', 'Use shortcut through random cavern'],
+    buttonText: ['Take a quick break', 'Use shortcut through that cavern'],
     choices: [6, 9]
   },
   { 
@@ -136,7 +136,7 @@ var stories = { stories: [
     subheader: 'Gervis stereotypically goes for the carrot cake. He could not resist, however, as he comes up to the window, there is something strange about this cake. It smells exactly like carrot cake, but has a moldy look to it that makes it a little less appealing to the young hare. But he did come all this way...', 
     content: 'What should Gervis do?',
     image: 'images/hareThree.jpg',
-    buttonText: ['Eat it anyways!', 'Speak to the big insect nearby'],
+    buttonText: ['Eat it anyways!', 'Speak to the insect nearby'],
     choices: [18, 19]
   },
   { 
@@ -178,7 +178,7 @@ var stories = { stories: [
     header: 'The Rolling Egg', 
     subheader: 'Elvie decides he should not enter the fiery flames. As Elvie turns back, his egg begins cracking slowly. The egg shell crumbles and soon you realize Elvie is a pile of delicious scrambled eggs! What the?!',
     image: 'images/eggEight.jpg',
-    buttonText: ['Time to eat!'],
+    buttonText: ['Time to eat..?'],
     choices: [0]
   },
   { 
@@ -255,7 +255,6 @@ var stories = { stories: [
   }
 ]};
 
-
 function createStory(info) {
   var container = document.createElement('div');
   container.setAttribute('class', 'col-md-11 story');
@@ -314,7 +313,6 @@ function createStory(info) {
   console.log(container);
   return container;
 }
-
 
 var start = document.getElementById('select')
   start.addEventListener('click', function() {
